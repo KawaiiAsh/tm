@@ -5,42 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Temu</title>
   <style>
-    /* 页面整体无边距 */
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
-      overflow-x: hidden; /* 只禁止横向滚动 */
     }
 
-    /* iframe 自适应全屏 */
     iframe {
       width: 100%;
-      height: 100%;
+      height: 100vh;  /* 固定为一屏高 */
       border: none;
       display: block;
 
-      /* 移动端手势滚动支持 */
+      /* 移动端滚动支持 */
       overflow: auto;
       -webkit-overflow-scrolling: touch;
-    }
-
-    .iframe-container {
-      position: relative;
-      width: 100%;
-      height: 100vh;
     }
   </style>
 </head>
 <body>
-  <div class="iframe-container">
-    <iframe 
-      src="https://lccc336.github.io" 
-      title="B 网站"
-      allowfullscreen
-      loading="lazy"
-      sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
-    ></iframe>
-  </div>
+  <iframe 
+    src="https://lccc336.github.io" 
+    title="B 网站"
+    allowfullscreen
+    loading="lazy"
+    sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+  ></iframe>
 </body>
 </html>
