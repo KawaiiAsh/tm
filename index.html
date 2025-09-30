@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Temu</title>
   <style>
-    /* 页面整体无滚动条、无边距 */
+    /* 页面整体无边距 */
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
-      overflow-x: hidden; /* 只隐藏横向滚动条 */
+      overflow-x: hidden; /* 只禁止横向滚动 */
     }
 
     /* iframe 自适应全屏 */
@@ -19,9 +19,12 @@
       height: 100%;
       border: none;
       display: block;
+
+      /* 移动端手势滚动支持 */
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
     }
 
-    /* 可选：iframe外层容器，方便控制布局 */
     .iframe-container {
       position: relative;
       width: 100%;
@@ -31,19 +34,13 @@
 </head>
 <body>
   <div class="iframe-container">
-    <!-- 将 https://b.com 替换为你要嵌入的网站地址 -->
-  <iframe 
-    src="https://kawaiiash.github.io" 
-    title="Temu"
-    allowfullscreen
-    loading="lazy"
-    sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
-    style="overflow:auto; -webkit-overflow-scrolling:touch;"
-  >
-  </iframe>
+    <iframe 
+      src="https://lccc336.github.io" 
+      title="B 网站"
+      allowfullscreen
+      loading="lazy"
+      sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+    ></iframe>
   </div>
 </body>
 </html>
-
-
-
