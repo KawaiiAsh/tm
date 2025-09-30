@@ -10,7 +10,7 @@
       margin: 0;
       padding: 0;
       height: 100%;
-      overflow: hidden;
+      overflow-x: hidden; /* 只隐藏横向滚动条 */
     }
 
     /* iframe 自适应全屏 */
@@ -32,16 +32,18 @@
 <body>
   <div class="iframe-container">
     <!-- 将 https://b.com 替换为你要嵌入的网站地址 -->
-    <iframe 
-      src="https://kawaiiash.github.io" 
-      title="Temu"
-      allowfullscreen
-      loading="lazy"
-      sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
-    >
-    </iframe>
+  <iframe 
+    src="https://kawaiiash.github.io" 
+    title="Temu"
+    allowfullscreen
+    loading="lazy"
+    sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+    style="overflow:auto; -webkit-overflow-scrolling:touch;"
+  >
+  </iframe>
   </div>
 </body>
 </html>
+
 
 
